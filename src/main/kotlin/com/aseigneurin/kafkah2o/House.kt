@@ -1,4 +1,4 @@
-package com.ippontech.kafkah2o
+package com.aseigneurin.kafkah2o
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonInclude.Include

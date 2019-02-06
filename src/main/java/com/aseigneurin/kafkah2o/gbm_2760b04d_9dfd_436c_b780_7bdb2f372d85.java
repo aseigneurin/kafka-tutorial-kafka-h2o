@@ -16,7 +16,7 @@
 
      (Note:  Try java argument -XX:+PrintCompilation to show runtime JIT compiler behavior.)
 */
-package com.ippontech.kafkah2o;
+package com.aseigneurin.kafkah2o;
 
 import java.util.Map;
 import hex.genmodel.GenModel;
@@ -1007,5 +1007,4 @@ class gbm_2760b04d_9dfd_436c_b780_7bdb2f372d85_Tree_49_class_0 {
         return pred;
     } // constant pool size = 10B, number of visited nodes = 2, static init size = 0B
 }
-
 

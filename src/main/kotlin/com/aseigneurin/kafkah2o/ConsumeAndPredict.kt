@@ -1,4 +1,4 @@
-package com.ippontech.kafkah2o
+package com.aseigneurin.kafkah2o
 
 import hex.genmodel.easy.EasyPredictModelWrapper
 import hex.genmodel.easy.RowData

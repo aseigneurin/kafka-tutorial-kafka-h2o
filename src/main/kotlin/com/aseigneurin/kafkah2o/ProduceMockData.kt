@@ -29,18 +29,25 @@ class ProduceMockData(brokers: String) {
     fun produce() {
         val random = Random()
         while (true) {
+            val sqft = 1000 + random.nextInt(2000)
             val house = House(
-                    sqft = 1000 + random.nextInt(2000),
-                    lot_size_acres = random.nextFloat(),
-                    stories = random.nextInt(3),
-                    number_bedrooms = random.nextInt(5),
-                    number_bathrooms = random.nextInt(4),
-                    attached_garage = random.nextBoolean(),
-                    has_pool = random.nextBoolean(),
-                    has_kitchen_island = random.nextBoolean(),
-                    main_flooring_type = "hardwood",
-                    has_granite_counters = random.nextBoolean(),
-                    house_age_years = random.nextInt(20)
+                    date = "2014-05-02 00:00:00",
+                    bedrooms = random.nextInt(5),
+                    bathrooms = random.nextInt(3).toDouble(),
+                    sqft_living = sqft,
+                    sqft_lot = sqft * 2,
+                    floors = random.nextInt(3).toDouble(),
+                    waterfront = "0",
+                    view = "0",
+                    condition = random.nextInt(4).toString(),
+                    sqft_above = sqft,
+                    sqft_basement = 0,
+                    yr_built = 1900 + random.nextInt(80),
+                    yr_renovated = 1980 + random.nextInt(25),
+                    street = "Burke-Gilman Trail",
+                    city = "Seattle",
+                    statezip = "WA 98155",
+                    country = "USA"
             )
 
             val houseJson = jsonMapper.writeValueAsString(house)

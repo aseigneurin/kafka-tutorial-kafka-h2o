@@ -4,9 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.fasterxml.jackson.databind.util.StdDateFormat
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
+import java.time.format.DateTimeFormatter
 
 val housesTopic = "housing"
 val predictionsTopic = "predictions"
+val zipCodesTopic = "zipcodes"
+val enrichedHousesTopic = "houses-enriched"
 
 val jsonMapper = ObjectMapper().apply {
     registerKotlinModule()
@@ -14,7 +17,4 @@ val jsonMapper = ObjectMapper().apply {
     setDateFormat(StdDateFormat())
 }
 
-fun Boolean.toYesNo(): String = when (this) {
-    true -> "yes"
-    else -> "no"
-}
+val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
